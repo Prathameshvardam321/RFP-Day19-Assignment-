@@ -9,7 +9,8 @@ public class UserRegister {
         Matcher matcher = pattern.matcher("Prathmesh");
         if (matcher.matches()){
             System.out.println(true);
-        }else {
+        }
+        else {
             System.out.println(false);
         }
     }
