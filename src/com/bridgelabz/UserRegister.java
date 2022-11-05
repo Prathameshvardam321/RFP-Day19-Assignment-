@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,11 +8,11 @@ public class UserRegister {
     static Pattern emailId = Pattern.compile("^[A-Za-z]{3,}[.]?[a-z]*@([a-z]+)[.]?[a-z]+[.]?[a-z]*$");
     static Pattern countryCode = Pattern.compile("^[0-9]{2}[\\s][0-9]{10}$");
     static Pattern passwordRule1 = Pattern.compile("^[a-zA-Z]{8,}");
+    static Pattern passwordRule2 = Pattern.compile("^(?=.*[A-Z]).{8,}$");
     public static void main(String[] args) {
-        Matcher matcher = passwordRule1.matcher("PassWord");
+        Matcher matcher = passwordRule2.matcher("PrathMesh");
         if (matcher.matches()){
             System.out.println(true);
-
         } else {
             System.out.println(false);
         }
