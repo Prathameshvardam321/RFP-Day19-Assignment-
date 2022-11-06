@@ -9,9 +9,10 @@ public class UserRegister {
     static Pattern countryCode = Pattern.compile("^[0-9]{2}[\\s][0-9]{10}$");
     static Pattern passwordRule1 = Pattern.compile("^[a-zA-Z]{8,}");
     static Pattern passwordRule2 = Pattern.compile("^(?=.*[A-Z]).{8,}$");
-    static Pattern passwordRule3 = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9]).{8,}$");
+    static Pattern passwordRule3 = Pattern.compile("^(?=.[A-Z])(?=.*[0-9]).{8,}$");
+    static Pattern passwordRule4 = Pattern.compile("^(?=.*[A-Z])(?=.*[!@#$%&*()])(?=.*[0-9])(?=\\S+$).{8,}$");
     public static void main(String[] args) {
-        Matcher matcher = passwordRule3.matcher("PRAaaa12231");
+        Matcher matcher = passwordRule4.matcher("papapA1akm");
         if (matcher.matches()){
             System.out.println(true);
         } else {
